@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-dark="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV VITAE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-dark>
+    <div class="contenedor">
+      <div class="caja__boton">
+        <i class="fa-solid fa-bars boton" id="hamburgesa"></i>
+      </div>
+      <div class="main" id="home">
+        <nav class="menu__nav" id="menu__navegacion">
+          <a href="#home" class="menu__link">Inicio</a>
+          <a href="#intereses" class="menu__link">Experiencia</a>
+          <a href="#habilidades" class="menu__link">Habilidades</a>
+          <a href="#educacion" class="menu__link">Educación</a>
+          <a href="#contacto" class="menu__link">Contacto</a>
+        </nav>
+
+        <div class="main__contenido">
+          <div class="main__contenido__texto">
+            <h1>Gustavo Aguirre_</h1>
+            <p>
+              es mi nombre, tengo 19 años y vivo en Buenos Aires, Argentina. Soy
+              un desarrollador web que se especializa en el front-end, estudio
+              hace 3 años y trabajo hace uno y medio. Mi objetivo es llegar a
+              consolidarme en el mundo del desarrollo web, y poder hacer
+              proyectos grandes por mi cuenta.
+            </p>
+          </div>
+          <img src="/imagen.png" alt="" class="contenedor__imagen" />
+        </div>
+      </div>
+
+      <hr />
+      <div class="contenedor__dos" id="intereses">
+        <div class="contenedor__dos__main">
+          <h2 class="subtitle">Experiencía</h2>
+          <img src="./logo_1.svg" alt="" id="logo__dos" />
+        </div>
+        <div class="contenedor__dos__parrafo">
+          <p>
+            Mi experiencia laboral empezó hace un año y medío. Empece trabajando
+            de forma auto-didacta creando maquetas para paginas web. Hasta que
+            pude entrar en un grupo de una pequeña empresa a trabajar, como
+            front-end. Yo me enfocaba en la maquetación de la misma, el diseño,
+            y el funcionamiento de las interacciónes del usuarío. Estuve 8 meses
+            trabajando aquí. 
+            <br>
+            Hoy en dia me encuentro en busca de nuevos empleos
+            y enfocado en mis propios proyectos.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="contenedor__dos" id="habilidades">
+        <div class="contenedor__dos__main">
+          <h2>Habilidades</h2>
+          <img src="./logo_1.svg" alt="" id="logo__dos" />
+        </div>
+        <div class="contenedor__dos__parrafo">
+          <div class="iconos__lenguaje">
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <li>
+            HTML avanzado
+           
+          </li>
+          <li>
+            CSS avanzado
+          
+          </li>
+          <li>
+            Javascript avanzado
+           
+          </li>
+          <li>
+            React basico
+            
+          </li>
+        </div>
+      </div>
+      <div class="contenedor__dos" id="educacion">
+        <div class="contenedor__dos__main">
+          <h2 class="subtitle">Educación</h2>
+          <img src="./logo_1.svg" alt="" id="logo__dos" />
+        </div>
+        <div class="contenedor__dos__parrafo">
+          <p>
+            <li>Estudiante de ATIC en la Facultad UNLP</li>
+            <li>Argentina Programa</li>
+            <li>Curso de online de Javascript</li>
+            <li>Curso de diseño Web</li>
+            <li>Curso de 'Animation CSS'</li>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="contenedor__dos" id="contacto">
+        <h3 class="subtitle">Contactame</h3>
+        <div class="redes">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+      </div>
+    </div>
+    <button class="dark-theme-btn">🌙</button>
+
+    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              { scrollTop: $(hash).offset().top },
+              1200,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
